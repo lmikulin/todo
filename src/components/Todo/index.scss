@@ -1,0 +1,7 @@
+@import '../../style/sizes';
+
+span.todo-text {
+  display: inline-block;
+  width: $todo-text-width;
+  margin: 0 6px;
+}

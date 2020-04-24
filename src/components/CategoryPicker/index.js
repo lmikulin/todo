@@ -15,10 +15,13 @@ const CategoryPicker = props => {
     setCategoryAction(selection);
   }
 
-  return <select value={category} onChange={handleSelect}>
-      <option key="none" value="">All Categories</option>
-      {categories.map(item => <option key={item} value={item}>{item}</option>)}
-    </select>;
+  return <div>
+      <label className="title">Filter by Category</label>
+      <select value={category} onChange={handleSelect}>
+        <option key="none" value="">All Categories</option>
+        {categories.map(item => <option key={item} value={item}>{item}</option>)}
+      </select>
+    </div>;
 };
 
 const mapStateToProps = state => ({

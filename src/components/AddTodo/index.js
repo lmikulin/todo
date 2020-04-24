@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
 import { addTodo } from '../../redux/actions/todo';
 
+import './index.scss';
+
 const AddTodo = ({ addTodo: addTodoAction }) => {
   const handleSubmit = event => {
     event.preventDefault();
@@ -13,7 +15,7 @@ const AddTodo = ({ addTodo: addTodoAction }) => {
   }
 
   return <form onSubmit={handleSubmit}>
-    <input name="todotext" />
+    <input name="todotext" className="todo-text" />
     <input name="category" />
     <button type="submit">Add Todo</button>
   </form>;

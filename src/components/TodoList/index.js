@@ -4,13 +4,15 @@ import Todo from '../Todo';
 import AddTodo from '../AddTodo';
 import { getTodos } from '../../redux/selectors';
 
+import './index.scss';
+
 const TodoList = ({ todos }) => (
   <div>
-    <h2>Todos</h2>
-    <ul>
+    <label className="title">Todos</label>
+    <AddTodo />
+    <ul className="todo-list">
       {todos.map(todo => <li key={todo.id}><Todo todo={todo} /></li>)}
     </ul>
-    <AddTodo />
   </div>
 );
 

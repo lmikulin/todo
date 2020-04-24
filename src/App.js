@@ -4,9 +4,13 @@ import CategoryPicker from './components/CategoryPicker';
 import './App.scss';
 
 function App() {
-  return <div>
-    <TodoList />
-    <CategoryPicker />
+  return <div className="app">
+    <div className="column">
+      <TodoList />
+    </div>
+    <div className="column">
+      <CategoryPicker />
+    </div>
   </div>;
 }
 
